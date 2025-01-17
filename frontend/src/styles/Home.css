@@ -1,0 +1,131 @@
+/* Home.css */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient background */
+}
+
+.home-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  color: #fff; /* White text for contrast */
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+.welcome-message h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #fff; /* White text */
+}
+
+.welcome-message p {
+  font-size: 1.2em;
+  color: #e0e7ff; /* Light purple text */
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px; /* Add padding to prevent overflow */
+}
+
+.card-link {
+  text-decoration: none; /* Remove underline from links */
+  flex: 1 1 300px; /* Ensure all cards are the same size */
+  max-width: 300px; /* Fixed width for consistency */
+  min-width: 250px; /* Minimum width to prevent shrinking */
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, background 0.3s ease-in-out;
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  height: 100%; /* Ensure all cards have the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align content evenly */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Lift effect on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+  background: rgba(255, 255, 255, 0.2); /* Slightly brighter background on hover */
+}
+
+.card-icon {
+  font-size: 2.5em;
+  color: #fff; /* White icon color */
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #fff; /* White text */
+}
+
+.card p {
+  font-size: 1em;
+  color: #e0e7ff; /* Light purple text */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply card animation */
+.card {
+  animation: cardEnter 0.5s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-message h1 {
+    font-size: 2em; /* Smaller font size for smaller screens */
+  }
+
+  .welcome-message p {
+    font-size: 1em; /* Smaller font size for smaller screens */
+  }
+
+  .card-link {
+    flex: 1 1 100%; /* Full width on smaller screens */
+    max-width: 100%;
+  }
+}

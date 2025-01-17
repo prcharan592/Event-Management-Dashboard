@@ -1,0 +1,179 @@
+/* Sidebar container */
+.sidebar-container {
+  display: flex;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 60px; /* Width when closed */
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+  color: white;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar.open {
+  width: 240px; /* Width when open */
+}
+
+/* Toggle button */
+.toggle-button {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.toggle-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Brighter on hover */
+  transform: scale(1.1); /* Slight scale animation */
+}
+
+.toggle-button .logo {
+  font-size: 24px;
+  animation: bounce 1.5s infinite; /* Bounce animation for the logo */
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Menu styling */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Menu item enhancements */
+.menu-item {
+  padding: 20px 25px; /* Increased padding for larger size and gap */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-item a,
+.logout-button {
+  text-decoration: none;
+  color: #ecf0f1;
+  font-size: 18px; /* Increased font size */
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increased gap between icon and text */
+}
+
+.menu-item a:hover,
+.logout-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transform: translateX(10px); /* Slide animation on hover */
+}
+
+.menu-icon {
+  font-size: 24px; /* Increased icon size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-text {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+/* Hidden class for the menu items */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 0.3s, opacity 0.3s linear;
+}
+
+/* Logout button */
+.logout-button {
+  width: 100%;
+  text-align: center;
+  padding: 15px; /* Increased padding */
+  background: #ff4757; /* Red color for logout */
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: inherit;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Increased gap between icon and text */
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #ff6b81; /* Brighter red on hover */
+  transform: scale(1.05); /* Slight scale animation */
+}
+
+/* User profile section */
+.user-profile {
+  text-align: center;
+  padding: 30px 10px; /* Increased padding */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-avatar {
+  width: 80px; /* Increased size */
+  height: 80px; /* Increased size */
+  margin: 0 auto 15px; /* Increased margin */
+  background-color: #1abc9c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px; /* Increased font size */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1); /* Scale animation on hover */
+}
+
+.user-name {
+  color: #ecf0f1;
+  font-size: 18px; /* Increased font size */
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient for mobile */
+  }
+
+  .sidebar.open {
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.4);
+  }
+
+  .toggle-button {
+    font-size: 18px;
+  }
+}
