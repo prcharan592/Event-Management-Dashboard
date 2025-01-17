@@ -1,4 +1,7 @@
-﻿# Event Management Dashboard Overview
+# Demo Vidio Link
+   https://drive.google.com/drive/folders/1BiMlZczYREa6Dsp0QFXjxV0yJ4cHAoG5?usp=sharing
+ 
+# Event Management Dashboard Overview
 
 # Description
 The Event Management Dashboard is a web-based application designed to help organizations efficiently manage events, attendees, and tasks. It provides a centralized platform for creating, updating, and tracking events, assigning tasks to attendees, and visualizing task progress. The application features a React-based frontend and a Node.js + Express backend, with MongoDB for data storage.
