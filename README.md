@@ -49,6 +49,11 @@ The Event Management Dashboard is a web-based application designed to help organ
 ----------------------------------------------------------------------------
 
 # Project Setup:
+
+git clone https://github.com/prcharan592/Event-Management-Dashboard
+
+cd Event-Management-Dashboard
+
 ----------------
 # Frontend Setup
 
