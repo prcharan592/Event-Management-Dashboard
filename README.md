@@ -74,9 +74,9 @@ The Event Management Dashboard is a web-based application designed to help organ
 
 1. Create an Event
 
-Endpoint: /postEvent
+  Endpoint: /postEvent
 
-Method: POST
+  Method: POST
 
 Body Parameters:
 name (string): Event name.
@@ -86,15 +86,15 @@ date (string): Event date.
 
 2. Get All Events
 
-Endpoint: /getEvents
+  Endpoint: /getEvents
 
-Method: GET
+  Method: GET
 
 3. Update an Event
 
-Endpoint: /updateEvent
+  Endpoint: /updateEvent
 
-Method: PUT
+  Method: PUT
 
 Body Parameters:
 name (string): Event name.
@@ -104,9 +104,9 @@ date (string): Updated date.
 
 4. Delete an Event
 
-Endpoint: /deleteEvent
+  Endpoint: /deleteEvent
 
-Method: DELETE
+  Method: DELETE
 
 Body Parameters:
 eventName (string): Name of the event to delete.
@@ -115,9 +115,9 @@ eventName (string): Name of the event to delete.
 
 1. Add an Attendee
 
-Endpoint: /postAttendee
+  Endpoint: /postAttendee
 
-Method: POST
+  Method: POST
 
 Body Parameters:
 name (string): Attendee name.
@@ -126,15 +126,15 @@ event (string): Event ID.
 
 2. Get All Attendees
 
-Endpoint: /getAttendees
+  Endpoint: /getAttendees
 
-Method: GET
+  Method: GET
 
 3. Delete an Attendee
 
-Endpoint: /deleteAttendee
+  Endpoint: /deleteAttendee
 
-Method: DELETE
+  Method: DELETE
 
 Body Parameters:
 attendeeName (string): Name of the attendee to delete.
@@ -142,9 +142,9 @@ attendeeName (string): Name of the attendee to delete.
 # Task Management API
 1. Create a Task
 
-Endpoint: /postTask
+  Endpoint: /postTask
 
-Method: POST
+  Method: POST
 
 Body Parameters:
 name (string): Task name.
@@ -153,16 +153,17 @@ status (string): Task status (Pending/Completed).
 
 2. Get Tasks for an Event
 
-Endpoint: /getEventTasks
-Method: GET
+  Endpoint: /getEventTasks
+  Method: GET
+  
 Query Parameters:
 name (string): Event name.
 
 3. Update Task Status
 
-Endpoint: /changeTaskStatus
-
-Method: PUT
+  Endpoint: /changeTaskStatus
+  
+  Method: PUT
 
 Body Parameters:
 taskName (string): Task name.
