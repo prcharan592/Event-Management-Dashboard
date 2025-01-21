@@ -1,5 +1,4 @@
-# Demo Vidio Link
-   https://drive.google.com/drive/folders/1BiMlZczYREa6Dsp0QFXjxV0yJ4cHAoG5?usp=sharing
+
  
 # Event Management Dashboard Overview
 
